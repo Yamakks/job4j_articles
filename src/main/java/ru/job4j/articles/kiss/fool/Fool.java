@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class Fool {
 
-    static boolean answers (int key) {
+    static String answers (int key) {
         String[] sys = {"Ошибка. Начинай снова.","Fizz", "Buzz", "FizzBuzz"};
         int k = 0;
         boolean buz = key % 3 == 0;
         boolean fiz = key % 5 == 0;
         boolean buzfiz = buz && fiz;
         if (buzfiz) {
-            System.out.println(sys[3]);
+            return sys[3];
         } else if (buz) {
-            System.out.println(sys[1]);
+            return sys[1];
         } else if (fiz) {
-            System.out.println(sys[2]);
+            return (sys[2]);
         } else {
             System.out.println();
         }
