@@ -52,7 +52,7 @@ class Cinema3DTest {
     public void whenBuyTicketWrongDateThenGetException() {
         Account account = new AccountCinema();
         Cinema cinema = new Cinema3D();
-        Calendar paste =Calendar.getInstance();
+        Calendar paste = Calendar.getInstance();
         ssertThatThrownBy(() -> cinema.buy(account, 5, 5, paste))
                 .isInstanceOf(IllegalArgumentException.class);
 
