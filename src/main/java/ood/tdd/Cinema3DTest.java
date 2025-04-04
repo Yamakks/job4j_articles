@@ -3,12 +3,12 @@ package ood.tdd;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.util.Calendar;
 import java.util.List;
-
-import static org.hamcrest.MatcherAssert.assertThat;
 
 @Disabled("Тесты отключены. Удалить аннотацию после реализации всех методов по заданию.")
 class Cinema3DTest {
