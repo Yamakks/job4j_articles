@@ -1,12 +1,14 @@
 package ood.tdd;
 
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
 import java.util.Calendar;
 import java.util.List;
+
+import static org.hamcrest.MatcherAssert.assertThat;
 
 @Disabled("Тесты отключены. Удалить аннотацию после реализации всех методов по заданию.")
 class Cinema3DTest {
@@ -43,7 +45,7 @@ class Cinema3DTest {
         Cinema cinema = new Cinema3D();
         Calendar date = Calendar.getInstance();
         cinema.buy(account, 5, 5, date);
-        ssertThatThrownBy(() -> cinema.buy(account, 5, 5, date))
+        assertThatThrownBy(() -> cinema.buy(account, 5, 5, date))
                 .isInstanceOf(IllegalArgumentException.class);
 
     }
@@ -53,7 +55,7 @@ class Cinema3DTest {
         Account account = new AccountCinema();
         Cinema cinema = new Cinema3D();
         Calendar paste = Calendar.getInstance();
-        ssertThatThrownBy(() -> cinema.buy(account, 5, 5, paste))
+        assertThatThrownBy(() -> cinema.buy(account, 5, 5, paste))
                 .isInstanceOf(IllegalArgumentException.class);
 
     }
